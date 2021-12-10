@@ -21,6 +21,8 @@ public class Book {
     @JoinColumn(name="author_id")//join sull'id dell'autore
     private Author author;
 
+
+    
     public String getTitle() {
         return title;
     }

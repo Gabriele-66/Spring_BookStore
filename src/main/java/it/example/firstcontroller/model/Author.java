@@ -22,6 +22,8 @@ public class Author {
     @OneToMany(mappedBy = "author") // nome clase forte in minusoo
     private Set<Book> bookSet = new HashSet<>();
 
+
+    
     public Long getId() {
         return id;
     }
