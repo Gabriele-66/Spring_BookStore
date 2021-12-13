@@ -43,5 +43,11 @@ public class Author {
         this.surname = surname;
     }
 
-    
+    public Set<Book> getBookSet() {
+        return bookSet;
+    }
+
+    public void setBookSet(Set<Book> bookSet) {
+        this.bookSet = bookSet;
+    }
 }
