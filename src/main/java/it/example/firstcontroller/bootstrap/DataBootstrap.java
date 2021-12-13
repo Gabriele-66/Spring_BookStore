@@ -13,7 +13,6 @@ public class DataBootstrap implements CommandLineRunner{
     private AuthorRepository authorRepository;
     private BookRepository bookrepository;
 
-    public DataBootstrap() {}
     public DataBootstrap(AuthorRepository authorRepository, BookRepository bookrepository) {
         this.authorRepository = authorRepository;
         this.bookrepository = bookrepository;
