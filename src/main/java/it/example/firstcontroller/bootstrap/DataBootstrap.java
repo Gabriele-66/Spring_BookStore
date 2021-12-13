@@ -5,9 +5,19 @@ import org.springframework.stereotype.Component;
 
 import it.example.firstcontroller.model.Author;
 import it.example.firstcontroller.model.Book;
+import it.example.firstcontroller.repository.AuthorRepository;
+import it.example.firstcontroller.repository.BookRepository;
 
 @Component
 public class DataBootstrap implements CommandLineRunner{
+    private AuthorRepository authorRepository;
+    private BookRepository bookrepository;
+
+    public DataBootstrap() {}
+    public DataBootstrap(AuthorRepository authorRepository, BookRepository bookrepository) {
+        this.authorRepository = authorRepository;
+        this.bookrepository = bookrepository;
+    }
 
     @Override
     public void run(String... args) throws Exception {
@@ -20,6 +30,9 @@ public class DataBootstrap implements CommandLineRunner{
         book1.setISBN("abc123");
         book1.setAuthor(gab);
         
+        authorRepository.save(gab);
+        bookrepository.save(book1);
+
     }
 
 }
